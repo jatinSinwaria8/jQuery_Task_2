@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .btn {
+        background-color: #e5eecc;
+        border: gray 1px solid;
+        width: 100%;
+        cursor: pointer;
+      }
+      .box {
+        background-color: #dfedff;
+        border: gray 1px solid;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $(".box").slideUp(),
+          $(".btn").click(function () {
+            $(".box").slideDown();
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div style="width: 300px">
+      <button class="btn">Click me to slide down panel</button>
+      <div class="box"><h4>Hello World!</h4></div>
+    </div>
+  </body>
+</html>
